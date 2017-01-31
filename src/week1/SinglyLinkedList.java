@@ -44,15 +44,12 @@ public class SinglyLinkedList<E> {
     public void add(int index, E data) {
         Node newNode = new Node(data);
         if (head == null) {
+            this.head = newNode;
             return;
         }
 
         Node current = head;
         for (int i = 0; i < index; i++) {
-            if (current.getNext() == null) {
-                break;
-            }
-
             if (i + 1 == index) {
                 Node temp = current.getNext();
                 current.setNext(newNode);
@@ -60,7 +57,37 @@ public class SinglyLinkedList<E> {
                 break;
             }
 
+            if (current.getNext() == null) {
+                current.setNext(newNode);
+                break;
+            }
+
             current = current.getNext();
+        }
+    }
+
+    public void reverse() {
+        if (head == null)
+            return;
+
+        Stack<Node> reverse = new Stack<Node>();
+        Node current = head;
+        while(current != null) {
+            System.out.print(current.data);
+            reverse.push(current);
+            if (current.getNext() == null)
+                break;
+            current = current.getNext();
+        }
+        System.out.println("ba");
+        head = reverse.pop();
+        current = head;
+        Node currentPop = reverse.pop();
+        while(currentPop != null) {
+            currentPop = reverse.pop();
+            //System.out.println(current.data);
+            //current.setNext(currentPop);
+            //current = current.getNext();
         }
     }
 
@@ -91,9 +118,7 @@ public class SinglyLinkedList<E> {
         }
 
         public String toString() {
-            {
                 return data + "";
-            }
         }
     }
 }

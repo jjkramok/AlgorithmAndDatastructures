@@ -6,11 +6,15 @@ package week1;
 public class Opdract0 {
     public static void main(String[] args) {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
-        list.addFront(3);
-        list.addFront(2);
         list.addFront(1);
+        list.addFront(2);
+        list.addFront(3);
         list.append(4);
+        list.add(8, 9);
         System.out.println(list.toString());
+        list.reverse();
+        System.out.println(list.toString());
+        System.out.println();
 
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(1);
