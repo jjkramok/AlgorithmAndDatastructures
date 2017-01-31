@@ -11,5 +11,17 @@ public class Opdract0 {
         list.addFront(1);
         list.append(4);
         System.out.println(list.toString());
+
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.print();
+
+        String postfixInput = "5 1 2 + 4 * + 3 -";
+        Calculator tor = new Calculator(postfixInput);
+        System.out.print("Calculating postfix: ");
+        System.out.println(tor.calculatePostfix());
     }
 }
