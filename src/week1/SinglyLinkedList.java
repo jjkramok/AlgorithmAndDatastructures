@@ -7,7 +7,7 @@ public class SinglyLinkedList<E> {
     private Node head = null;
 
     public void addFront(E data) {
-        Node newNode = new Node(data);
+        Node newNode = new Node<E>(data);
         newNode.setNext(head);
         head = newNode;
     }
@@ -17,13 +17,17 @@ public class SinglyLinkedList<E> {
      * @param data
      */
     public void append(E data) {
-        Node newNode = new Node(data);
+        Node newNode = new Node<E>(data);
         newNode.setNext(null);
-        Node last = head;
-        while(last != null) {
-            if (last.getNext() == null) {
-                last.setNext(newNode);
-                break;
+        if (head == null) {
+            this.head = newNode;
+        } else {
+            Node last = head;
+            while (last != null) {
+                if (last.getNext() == null) {
+                    last.setNext(newNode);
+                    break;
+                }
             }
         }
     }
@@ -38,11 +42,11 @@ public class SinglyLinkedList<E> {
         return result;
     }
 
-    private class Node<E> {
-        private E data;
+    private class Node<T> {
+        private T data;
         private Node next;
 
-        public Node(E data) {
+        public Node(T data) {
             this.data = data;
         }
 
