@@ -22,13 +22,11 @@ public class SinglyLinkedList<E> {
         if (head == null) {
             this.head = newNode;
         } else {
-            Node last = head;
-            while (last != null) {
-                if (last.getNext() == null) {
-                    last.setNext(newNode);
-                    break;
-                }
+            Node current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
             }
+            current.setNext(newNode);
         }
     }
 
