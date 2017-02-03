@@ -11,8 +11,11 @@ public class Stack<T> {
     }
 
     public T pop() {
-        T tosData = this.tos.data;
-        this.tos = this.tos.next;
+        T tosData = null;
+        if (this.tos != null) {
+            tosData = this.tos.data;
+            this.tos = this.tos.next;
+        }
         return tosData;
     }
 

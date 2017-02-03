@@ -67,7 +67,8 @@ public class SinglyLinkedList<E> {
     }
 
     public void reverse() {
-        if (head == null)
+        //Empty and single node lists are useless for this operation
+        if (head == null || head.getNext() == null)
             return;
 
         Stack<Node> reverse = new Stack<Node>();
@@ -79,15 +80,14 @@ public class SinglyLinkedList<E> {
                 break;
             current = current.getNext();
         }
-        System.out.println("ba");
-        head = reverse.pop();
+        System.out.println(" <-- in stack");
+        this.head = reverse.pop();
         current = head;
         Node currentPop = reverse.pop();
         while(currentPop != null) {
-            currentPop = reverse.pop();
-            //System.out.println(current.data);
-            //current.setNext(currentPop);
-            //current = current.getNext();
+            current.setNext(new Node(currentPop.data));     //Set last pop as new SLL node
+            current = current.getNext();                    //Go to the new last node of the SLL structure (to insert new node in the next iteration)
+            currentPop = reverse.pop();                     //Take the TOS for this iteration
         }
     }
 

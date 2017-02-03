@@ -3,7 +3,7 @@ package week1;
 /**
  * Created by Tim H on 31/1/2017.
  */
-public class Opdract0 {
+public class Excersises {
     public static void main(String[] args) {
         SinglyLinkedList<Integer> list = new SinglyLinkedList<Integer>();
         list.addFront(1);
@@ -13,7 +13,7 @@ public class Opdract0 {
         list.add(8, 9);
         System.out.println(list.toString());
         list.reverse();
-        System.out.println(list.toString());
+        System.out.println(list.toString() + " <-- reversed (SLL)");
         System.out.println();
 
         Stack<Integer> stack = new Stack<Integer>();
