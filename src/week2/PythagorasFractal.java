@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by Kramok on 13-2-2017.
+ * Created by Tim H on 13-2-2017.
  */
 public class PythagorasFractal extends JPanel {
     static final int width = 1260;

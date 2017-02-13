@@ -4,12 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by Kramok on 13-2-2017.
+ * Created by Tim H on 13-2-2017.
  */
 public class MinkowskiFractal extends JPanel {
     static final int width = 1260;
-    static final int height = 780;
-    static final double factor = 0.707; //Math.sqrt(2);
+    static final int height = 1060;
 
     public MinkowskiFractal() {}
 
