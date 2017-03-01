@@ -9,14 +9,18 @@ public class DirectorySizeCalculator {
     private String filepath;
     private File root;
 
+    public DirectorySizeCalculator() {
+
+    }
+
     public DirectorySizeCalculator(String filepath) {
         this.root = new File(filepath);
         this.filepath = filepath;
     }
 
-    public double calculateSize(String filepath) {
+    public long calculateSize(String filepath) {
         File root = new File(filepath);
-        return 0; //stub
+        return root.getTotalSpace();
     }
 
     public double calculateSize() {
