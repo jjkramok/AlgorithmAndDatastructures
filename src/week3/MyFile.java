@@ -16,12 +16,12 @@ public class MyFile extends File {
                 new MyFile(getPath() + separatorChar + entry).listAll(depth+1);
             }
         } else {
-            for(int i=0; i<depth; i++) System.out.print("\t");
             System.out.print(this.getName() + "\n");
+            for(int i=0; i<(depth); i++) System.out.print("\t");
         }
     }
 
     public static void main(String[] args) {
-                new MyFile("c:\\program files\\Android").listAll(0);
+                new MyFile("c:\\program files\\Git").listAll(0);
     }
 }
