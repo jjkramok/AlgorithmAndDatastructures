@@ -6,7 +6,8 @@ package week3;
  * Excersise 2: see FileTreeHeightCalculator
  * Excersise 3: see java.io.File.getTotalSpace, 'uitdaging' not done
  * Excersise 4: see FCNS
- * Excersise 5:
+ * Excersise 5: no excersise / empty?
+ * Excersise 6:
  */
 public class Excersises {
 
@@ -24,5 +25,13 @@ public class Excersises {
         FCNS<Integer> second = new FCNS<Integer>(2, null, third);
         FCNS<Integer> first = new FCNS<Integer>(1, second, null);
         first.printPreOrder();
+
+        //Ex 6
+        Expression testTreeRoot = Expression.testExpression();
+        System.out.println("\n" + "prefix:");
+        Expression.printPreFix(testTreeRoot);
+        System.out.println("\n" + "postfix:");
+        Expression.printPostFix(testTreeRoot);
+        System.out.println();
     }
 }
