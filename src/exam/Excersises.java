@@ -23,6 +23,10 @@ public class Excersises {
         System.out.println(uneven.toString());
         System.out.println();
 
+        System.out.println("Ex. 2");
+
+        System.out.println();
+
         System.out.println("Ex. 3");
         BinaryNode<Integer> two = new BinaryNode<Integer>(2, null, null);
         BinaryNode<Integer> zero = new BinaryNode<Integer>(0, null, null);
