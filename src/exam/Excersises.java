@@ -37,5 +37,33 @@ public class Excersises {
         binTree.getRoot().setLeft(eight); binTree.getRoot().setRight(five);
         binTree.printDepth(3);
         System.out.println();
+
+        System.out.println("Ex. 4");
+        double[] unsorted = ASimpleSortingAlgorithm.createUnsorted();
+        for (int i = 0; i < unsorted.length; i++)
+            System.out.print(unsorted[i] + " ");
+        System.out.println();
+        double[] sorted = ASimpleSortingAlgorithm.sort(unsorted);
+        for (int i = 0; i < sorted.length; i++)
+            System.out.print(sorted[i] + " ");
+        System.out.println();
+        double[] newsorted = {15.0};
+        for (int i = 0; i < newsorted.length; i++)
+            System.out.print(newsorted[i] + " ");
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Ex. 5");
+        String s[] = {"1", "2", "3", "4", "5"};
+        int a[][] = {
+                {0, 1, 0, 0, 0},
+                {1, 0, 1, 1, 1},
+                {0, 1, 0, 1, 0},
+                {0, 1, 1, 0, 1},
+                {0, 1, 0 ,1 ,0}
+        };
+        Graph g = new Graph(s, a);
+        System.out.println(g.toString());
+        System.out.println();
     }
 }
